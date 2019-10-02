@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">NSuns</string>
+    <string name="tab_text_1">Day 1\nV. Bench</string>
+    <string name="tab_text_2">Day 2\nSquats</string>
+    <string name="tab_text_3">Day 3\nOHP</string>
+    <string name="tab_text_4">Day 4\nDeads</string>
+    <string name="tab_text_5">Day 5\nBench</string>
+    <string name="tab_text_6">Pullup\nTreaty</string>
+    <string name="navigation_drawer_open">Drawer Open</string>
+    <string name="navigation_drawer_close">Drawer Closed</string>
+
+    <string name="navigation_tms">Change TMs</string>
+    <string name="navigation_pb_records">Add PB records</string>
+    <string name="navigation_generate_config">Generate Config File</string>
+
+</resources>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- <group>
+        <item android:id="@+id/nav_item_one"
+            android:icon="@drawable/ic_launcher_foreground"
+            android:title="Item 1" />
+        <item android:id="@+id/nav_item_two"
+            android:icon="@drawable/ic_launcher_foreground"
+            android:title="Item 2" />
+        <item android:id="@+id/nav_item_three"
+            android:icon="@drawable/ic_launcher_foreground"
+            android:title="Item 3" />
+    </group> -->
+
+    <group android:id="@+id/group_menu"> <!-- invisible container for <item> elements -->
+        <item android:id="@+id/nav_item_one"
+            android:title="@string/navigation_tms" />
+        <item android:id="@+id/nav_item_two"
+            android:title="@string/navigation_pb_records" />
+        <item android:id="@+id/nav_item_three"
+            android:title="@string/navigation_generate_config" />
+    </group>
+
+    <!--<item android:title="Title 1"> -->
+    <!--<menu>--> <!--nested submenu for fun-->
+    <!--<item android:id="@+id/nav_item_six"
+        android:icon="@drawable/ic_launcher_foreground"
+        android:title="Item 6" />
+    <item android:id="@+id/nav_item_seven"
+        android:icon="@drawable/ic_launcher_foreground"
+        android:title="Item 7" />
+</menu>
+</item> -->
+</menu>
