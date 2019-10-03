@@ -13,8 +13,10 @@
     </group> -->
 
     <group android:id="@+id/group_menu"> <!-- invisible container for <item> elements -->
-        <item android:id="@+id/nav_item_one"
+        <item
+            android:id="@+id/nav_item_one"
             android:title="@string/navigation_tms" />
+            <!--android:onClick="updateTM"-->
         <item android:id="@+id/nav_item_two"
             android:title="@string/navigation_pb_records" />
         <item android:id="@+id/nav_item_three"

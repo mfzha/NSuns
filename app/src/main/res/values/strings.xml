@@ -13,4 +13,13 @@
     <string name="navigation_pb_records">Add PB records</string>
     <string name="navigation_generate_config">Generate Config File</string>
 
+    <string name="current_field_DL">current Deadlift</string>
+    <string name="current_field_OHP">current OHP</string>
+    <string name="current_field_Bench">current Bench</string>
+    <string name="current_field_Squat">current Squat</string>
+
+    <string name="updateTM">Update</string>
+    <string name="updateReloadTM">Update and Reload</string>
+    <string name="revertTM">Revert Changes</string>
+
 </resources>

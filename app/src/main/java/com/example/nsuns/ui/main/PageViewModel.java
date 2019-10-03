@@ -5,6 +5,7 @@ import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.Transformations;
 import androidx.lifecycle.ViewModel;
+import com.example.nsuns.MainActivity;
 
 public class PageViewModel extends ViewModel {
 
@@ -14,10 +15,10 @@ public class PageViewModel extends ViewModel {
         @Override
         public String apply(Integer input) {
 
-            double tm_ohp = 52.5;
-            double tm_squat = 100;
-            double tm_bench = 80;
-            double tm_dead = 122.5;
+            double tm_ohp = MainActivity.TM_OHP;
+            double tm_squat = MainActivity.TM_SQUAT;
+            double tm_bench = MainActivity.TM_BENCH;
+            double tm_dead = MainActivity.TM_DL;
 
             StringBuilder str = new StringBuilder();
             switch(input) {
