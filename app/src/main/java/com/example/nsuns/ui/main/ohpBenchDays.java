@@ -84,11 +84,11 @@ public class ohpBenchDays {
         }
 
         if (day == 3) {
-            str.append("Incline Bench\n");
+            str.append("\nIncline Bench\n");
         } else {
-            str.append("CG Bench\n");
+            str.append("\nCG Bench\n");
         }
-        str.append("\n%\t\t\t\tWt\t\t\t\tReps\n");
+        str.append("%\t\t\t\tWt\t\t\t\tReps\n");
 
         for (final String[] row : t2Lifts) {
             for (String item : row) {

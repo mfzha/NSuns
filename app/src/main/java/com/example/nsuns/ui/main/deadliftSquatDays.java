@@ -28,8 +28,10 @@ public class deadliftSquatDays {
                     case 7:
                         repCount = "\t5";
                         break;
-                    case 1:
                     case 2:
+                        repCount = "\t1+";
+                        break;
+                    case 1:
                     case 3:
                     case 4:
                     case 5:
@@ -44,8 +46,10 @@ public class deadliftSquatDays {
                     case 0:
                         repCount = "\t5";
                         break;
-                    case 1:
                     case 2:
+                        repCount = "\t1+";
+                        break;
+                    case 1:
                     case 3:
                     case 4:
                     case 5:
@@ -93,10 +97,10 @@ public class deadliftSquatDays {
 
         StringBuilder str = new StringBuilder();
 
-        if (day == 3) {
-            str.append("OHP\n");
+        if (day == 2) {
+            str.append("Squat\n");
         } else {
-            str.append("Bench\n");
+            str.append("Deadlifts\n");
         }
         str.append("%\t\t\t\tWt\t\t\t\tReps\n");
 
@@ -107,12 +111,12 @@ public class deadliftSquatDays {
             str.append("\n");
         }
 
-        if (day == 3) {
-            str.append("Incline Bench\n");
+        if (day == 2) {
+            str.append("\nSumo DL\n");
         } else {
-            str.append("CG Bench\n");
+            str.append("\nFront Squats\n");
         }
-        str.append("\n%\t\t\t\tWt\t\t\t\tReps\n");
+        str.append("%\t\t\t\tWt\t\t\t\tReps\n");
 
         for (final String[] row : t2Lifts) {
             for (String item : row) {
