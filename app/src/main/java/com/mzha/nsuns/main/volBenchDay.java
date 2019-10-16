@@ -1,13 +1,13 @@
-package com.example.nsuns.ui.main;
+package com.mzha.nsuns.main;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class ohpBenchDays {
+public class volBenchDay {
     public static String generateTable(exerciseTable myTable, Integer day) {
 
-        myTable.sett1Percentages(new ArrayList<>(Arrays.asList(75.0, 85.0, 95.0, 90.0, 85.0, 80.0, 75.0, 70.0, 65.0)));
-        myTable.sett2Percentages(new ArrayList<>(Arrays.asList(40.0, 50.0, 60.0, 60.0, 60.0, 60.0, 60.0, 60.0)));
+        myTable.sett1Percentages(new ArrayList<>(Arrays.asList(65.0, 75.0, 85.0, 85.0, 85.0, 80.0, 75.0, 70.0, 65.0)));
+        myTable.sett2Percentages(new ArrayList<>(Arrays.asList(50.0, 60.0, 70.0, 70.0, 70.0, 70.0, 70.0)));
 
         final String[][] t1Lifts = myTable.gett1Lifts();
         final String[][] t2Lifts = myTable.gett2Lifts();
@@ -18,21 +18,25 @@ public class ohpBenchDays {
             String repCount = "\t";
             switch (i){
                 case 0:
-                case 4:
-                case 6:
-                    repCount = "\t5";
+                    repCount = "\t8";
                     break;
                 case 1:
-                case 3:
-                case 5:
-                case 7:
-                    repCount = "\t3";
+                case 6:
+                    repCount = "\t6";
                     break;
                 case 2:
-                    repCount = "\t1+";
+                case 3:
+                case 4:
+                    repCount = "\t4";
+                    break;
+                case 5:
+                    repCount = "\t5";
+                    break;
+                case 7:
+                    repCount = "\t7";
                     break;
                 case 8:
-                    repCount = "\t5+";
+                    repCount = "\t8+";
                     break;
             }
 
@@ -44,37 +48,31 @@ public class ohpBenchDays {
             switch (i){
                 case 0:
                 case 6:
-                    repCount = "\t6";
+                    repCount = "\t8";
                     break;
                 case 1:
+                case 4:
+                    repCount = "\t6";
+                    break;
+                case 2:
+                    repCount = "\t4";
+                    break;
                 case 3:
                     repCount = "\t5";
                     break;
-                case 2:
-                    repCount = "\t3";
-                    break;
-                case 4:
+                case 5:
                     repCount = "\t7";
                     break;
-                case 5:
-                    repCount = "\t4";
-                    break;
-                case 7:
-                    repCount = "\t8";
-                    break;
             }
+
+            if (i == 7) { break; }
 
             t2Lifts[i] = new String[] {t2Percentages.get(i).intValue() + "\t\t\t", Double.toString(2.5*(Math.round(myTable.getTm_t2()*t2Percentages.get(i)/(100*2.5)))), "\t\t" + repCount};
         }
 
         StringBuilder str = new StringBuilder();
 
-        if (day == 3) {
-            str.append("OHP\n");
-        } else {
-            str.append("Bench\n");
-        }
-        str.append("%\t\t\t\tWt\t\t\t\tReps\n");
+        str.append("Volume Bench\n%\t\t\t\tWt\t\t\t\tReps\n");
 
         for (final String[] row : t1Lifts) {
             for (String item : row) {
@@ -83,31 +81,22 @@ public class ohpBenchDays {
             str.append("\n");
         }
 
-        if (day == 3) {
-            str.append("\nIncline Bench\n");
-        } else {
-            str.append("\nCG Bench\n");
-        }
-        str.append("%\t\t\t\tWt\t\t\t\tReps\n");
+        str.append("\nOHP\n%\t\t\t\tWt\t\t\t\tReps\n");
 
         for (final String[] row : t2Lifts) {
+            if (row == null) {
+                break;
+            }
             for (String item : row) {
                 str.append(item);
             }
             str.append("\n");
         }
 
-        if (day == 3) {
-            str.append("\nAccessories: Shoulders, Chest\n");
-            str.append("Chest:\n\t\tdb press 3x8-10\n\t\tcable xover 3x10-12\n");
-            str.append("Shoulders:\n\t\trear delt flies curl 3x12-15\n\t\tlat raises 3x10-12\n\t\tface pulls 3x12-15");
-        } else {
-            str.append("\nAccessories: Arms, Other\n");
-            str.append("Arms:\n\t\tbarbell curls 3x10-12\n\t\ttricep pushdowns 3x10-12\n\t\t\t\tSS db lat raise\n\t\thammer curls 3x10-12\n\t\t\t\tSS cable lat raise\n");
-            str.append("Shoulders:\n\t\tface pulls 3x12-15\n");
-            str.append("Feel free to add more core work");
-        }
-
+        str.append("\nAccessories: Chest, Arms, Back\n");
+        str.append("Chest:\n\t\tincline press 3x8-10\n\t\tcable xover 3x10-12\n");
+        str.append("Arms:\n\t\tbarbell curl 3x10-12\n\t\tchinups 5x?\n");
+        str.append("Back:\n\t\tT-Bar rows 3x8-10\n");
 
         return str.toString();
 

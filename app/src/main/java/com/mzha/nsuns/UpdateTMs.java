@@ -1,4 +1,4 @@
-package com.example.nsuns;
+package com.mzha.nsuns;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -10,17 +10,13 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.mzha.nsuns.R;
+
 import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
-import java.io.FileReader;
-import java.io.FilenameFilter;
 import java.io.InputStreamReader;
 import java.util.Arrays;
 import java.util.Locale;
-import java.util.Scanner;
 
 public class UpdateTMs extends AppCompatActivity {
 
@@ -65,7 +61,7 @@ public class UpdateTMs extends AppCompatActivity {
         }
 
         // update textviews
-        updateTextFields(OLD_TM_OHP, OLD_TM_BENCH, OLD_TM_SQUAT, OLD_TM_DL);
+        updateTextFields(OLD_TM_OHP, OLD_TM_SQUAT, OLD_TM_BENCH, OLD_TM_DL);
     }
 
     public void updateTMs(View view) {
@@ -113,11 +109,15 @@ public class UpdateTMs extends AppCompatActivity {
 
         if (!failure) {
             Toast.makeText(this, "Updated TMs successfully.", Toast.LENGTH_LONG).show();
-            updateView.setText(String.format(Locale.getDefault(), "%s", "Updated TMs successfully."));
-            refresh = true;
+            /*updateView.setText(String.format(Locale.getDefault(), "%s", "Updated TMs successfully."));
+            refresh = true;*/
+            MainActivity.getInstance().finish();
+            MainActivity.mainActivity = null;
+            finish();
+            startActivity(new Intent(this, MainActivity.class));
         } else {
             updateView.setText(String.format(Locale.getDefault(), "%s%s%s", "Detected incorrect format in:", failures, "Please try again."));
-            refresh = false;
+            //refresh = false;
         }
         /*if (!failure) {
             updateView.setText(String.format(Locale.getDefault(), "%s", "Updated TMs successfully."));
@@ -126,9 +126,16 @@ public class UpdateTMs extends AppCompatActivity {
             updateView.setText(String.format(Locale.getDefault(), "%s", "Detected incorrect format of TMs.\nPlease try again."));
             return false;
         }*/
+
+        /*if (refresh) {
+            MainActivity.getInstance().finish();
+            MainActivity.mainActivity = null;
+            finish();
+            startActivity(new Intent(this, MainActivity.class));
+        }*/
     }
 
-    public void updateReloadTMs(View view) {
+    /*public void updateReloadTMs(View view) {
         updateTMs(view);
         if (refresh) {
             MainActivity.getInstance().finish();
@@ -136,7 +143,7 @@ public class UpdateTMs extends AppCompatActivity {
             finish();
             startActivity(new Intent(this, MainActivity.class));
         }
-    }
+    }*/
 
     public void revertTMs(View view) {
         updateTextFields(OLD_TM_OHP, OLD_TM_SQUAT, OLD_TM_BENCH, OLD_TM_DL);

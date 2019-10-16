@@ -1,4 +1,4 @@
-package com.example.nsuns.ui.main;
+package com.mzha.nsuns.main;
 
 import java.util.ArrayList;
 import java.util.Arrays;

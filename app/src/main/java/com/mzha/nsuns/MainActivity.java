@@ -1,9 +1,10 @@
-package com.example.nsuns;
+package com.mzha.nsuns;
 
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
 
+import com.mzha.nsuns.R;
 import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.tabs.TabLayout;
 
@@ -15,13 +16,10 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.viewpager.widget.ViewPager;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.EditText;
 import android.widget.Toast;
 
-import com.example.nsuns.ui.main.SectionsPagerAdapter;
+import com.mzha.nsuns.main.SectionsPagerAdapter;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -106,10 +104,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 break;
             case R.id.nav_item_two:
                 Toast.makeText(this, "Add PB record", Toast.LENGTH_LONG).show();
+                //startActivity(new Intent(this, UpdatePBs.class));
                 break;
-            case R.id.nav_item_three:
+            /*case R.id.nav_item_three:
                 Toast.makeText(this, "Deprecated", Toast.LENGTH_LONG).show();
-                break;
+                break;*/
         }
         drawer.closeDrawer(GravityCompat.START); // close nav bar after clicking
         return false;

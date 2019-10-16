@@ -1,4 +1,4 @@
-package com.example.nsuns.ui.main;
+package com.mzha.nsuns.main;
 
 import android.content.Context;
 
@@ -8,7 +8,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
-import com.example.nsuns.R;
+import com.mzha.nsuns.R;
 
 /**
  * A [FragmentPagerAdapter] that returns a fragment corresponding to

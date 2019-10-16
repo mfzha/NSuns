@@ -1,11 +1,11 @@
-package com.example.nsuns.ui.main;
+package com.mzha.nsuns.main;
 
 import androidx.arch.core.util.Function;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.Transformations;
 import androidx.lifecycle.ViewModel;
-import com.example.nsuns.MainActivity;
+import com.mzha.nsuns.MainActivity;
 
 public class PageViewModel extends ViewModel {
 
@@ -24,7 +24,6 @@ public class PageViewModel extends ViewModel {
             switch(input) {
                 case 1:
                     exerciseTable day1Table = new exerciseTable();
-                    // TODO: have an app-side input of TM
                     day1Table.setTm_t1(tm_bench);
                     day1Table.setTm_t2(tm_ohp);
                     str.append(volBenchDay.generateTable(day1Table, input));
