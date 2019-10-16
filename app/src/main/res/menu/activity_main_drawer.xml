@@ -19,8 +19,6 @@
             <!--android:onClick="updateTM"-->
         <item android:id="@+id/nav_item_two"
             android:title="@string/navigation_pb_records" />
-        <item android:id="@+id/nav_item_three"
-            android:title="@string/navigation_generate_config" />
     </group>
 
     <!--<item android:title="Title 1"> -->

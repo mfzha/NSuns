@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".UpdateTMs">
+    tools:context="com.mzha.nsuns.UpdateTMs">
 
     <TextView
         android:id="@+id/currentDL"
@@ -137,12 +137,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="112dp"
         android:layout_marginEnd="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/updateReload" />
+        app:layout_constraintTop_toBottomOf="@+id/revertTMs" />
 
     <Button
         android:id="@+id/revertTMs"
@@ -156,18 +156,5 @@
         app:layout_constraintEnd_toStartOf="@+id/updateTMs"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/currentDL" />
-
-    <Button
-        android:id="@+id/updateReload"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="36dp"
-        android:layout_marginEnd="16dp"
-        android:onClick="updateReloadTMs"
-        android:text="@string/updateReloadTM"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/updateTMs" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -22,4 +22,13 @@
     <string name="updateReloadTM">Update and Reload</string>
     <string name="revertTM">Revert Changes</string>
 
+    <string name="current_field_DL_PB">current Deadlift</string>
+    <string name="current_field_OHP_PB">current OHP</string>
+    <string name="current_field_Bench_PB">current Bench</string>
+    <string name="current_field_Squat_PB">current Squat</string>
+
+    <string name="updatePB">Update</string>
+    <string name="updateReloadPB">Update and Reload</string>
+    <string name="revertPB">Revert Changes</string>
+
 </resources>
